@@ -1,0 +1,11 @@
+<header>
+	<h2 class="logo"><a routerLink="/" routerLinkActive="active">Angular2.0 App</a></h2>
+	<nav class="navigation">
+		<ul class="nav pull-right">
+		  <li *ngFor="let item of menuItems">
+		  	<a routerLink="/{{item.url}}" routerLinkActive="active">{{item.name}}</a>
+		  <li>
+		</ul>
+	</nav>
+	<hr>
+</header>

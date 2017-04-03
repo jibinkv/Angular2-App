@@ -1,0 +1,46 @@
+.logo{
+  float: left;
+  margin: 0px;
+  padding: 10px;
+  background-color: #e3e3e3;
+  color: #fff;
+  position: absolute;
+  top: 5px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation {
+  height: 30px;
+}
+
+.nav {
+  list-style: none;
+  margin-left: 10px;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: none;
+  }
+  
+.nav li {
+    font-size: 14px;
+    float: left;
+    position: relative;
+  }
+
+.nav a:link, a:active, a:visited {
+    display: block;
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #fff;
+}

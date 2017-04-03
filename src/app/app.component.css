@@ -1,0 +1,12 @@
+.wrapper {
+  width: 90%;
+  background-color: white;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #dedede;
+}
+
+.container {
+  margin: 0px auto;
+  padding: 10px;
+}
