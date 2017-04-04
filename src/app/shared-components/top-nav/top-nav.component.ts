@@ -20,6 +20,14 @@ export class TopNavComponent implements OnInit {
 			url: 'member'
 		},
 		{
+			name: 'User Details',
+			url: 'user'
+		},
+		{
+			name: 'Repo Search',
+			url: 'repos'
+		},
+		{
 			name: 'Contact',
 			url: 'contact'
 		},

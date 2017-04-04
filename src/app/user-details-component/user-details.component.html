@@ -1,0 +1,67 @@
+<h1>GitHub User Details</h1>
+<p>Search by github username.</p>
+<div class="form-group user-search-form">
+      <label class="control-label col-md-3" for="UserName">User Name:</label>
+      <div class="col-md-4">
+      	<input type="text" #username placeholder="Please enter username">
+      	<button class="show-details-button" (click)="showUserDetails(username.value)">Show Details</button>
+      </div>
+</div>
+
+<h3 *ngIf="username.value && !noUserResults">User Details</h3>
+<pre *ngIf="noUserResults"> User not found!</pre>
+<div *ngIf="user" class="user-details">
+	<div class="pull-right">
+	<img style="width:200px;height:200px;" src="https://avatars3.githubusercontent.com/u/16311322?v=3">
+	</div>
+	
+	<div class="form-group">
+      <label class="control-label col-md-3" for="type">Type:</label>
+      <div class="col-md-4">
+      	{{user.type}}
+      </div>
+	</div>
+
+	<div class="form-group">
+      <label class="control-label col-md-3" for="UserName">User Name:</label>
+      <div class="col-md-4">
+      	<a href={{user.html_url}}>{{user.login}}</a>
+      </div>
+	</div>
+
+	<div class="form-group">
+      <label class="control-label col-md-3" for="FullName">Full Name:</label>
+      <div class="col-md-6">
+      	{{user.name}}
+      </div>
+	</div>
+
+	<div class="form-group">
+      <label class="control-label col-md-3" for="Bio">User Bio:</label>
+      <div class="col-md-6">
+      	{{user.bio}}
+      </div>
+	</div>
+
+	<div class="form-group">
+      <label class="control-label col-md-3" for="Repos">Repositories:</label>
+      <div class="col-md-4">
+      	<a href={{user.repos_url}}>Click here to see repositories of {{user.name}}</a>
+      </div>
+	</div>
+
+	<div class="form-group">
+      <label class="control-label col-md-3" for="Email">Email:</label>
+      <div class="col-md-4">
+      	{{user.email}}
+      </div>
+	</div>
+
+	<div class="form-group">
+      <label class="control-label col-md-3" for="Company">Company:</label>
+      <div class="col-md-4">
+      	{{user.company}}
+      </div>
+	</div>
+
+</div>

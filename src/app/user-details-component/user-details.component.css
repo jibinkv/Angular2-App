@@ -1,0 +1,22 @@
+.form-group{
+  display: flex;
+}
+
+.user-search-form{
+  border: 1px solid #e3e3e3;
+  width: 50%;
+  padding: 10px;
+}
+
+.show-details-button{
+  margin-top: 10px;
+}
+
+.user-details{
+  border: 1px solid #e3e3e3;
+  padding: 10px;
+}
+
+.user-details a{
+  color: #337ab7;
+} 

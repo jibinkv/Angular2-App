@@ -1,0 +1,19 @@
+<h1>GitHub Repository Search</h1>
+<p>Search repository by github username.</p>
+<div class="form-group repo-search-form">
+      <label class="control-label col-md-3" for="UserName">User Name:</label>
+      <div class="col-md-4">
+      	<input type="text" #username placeholder="Please enter username">
+      	<button class="search-button" (click)="getUserRepos(username.value)">Search</button>
+      </div>
+</div>
+
+<h3 *ngIf="username.value && !noRepoResults">Repositories of {{username.value}}</h3>
+<pre *ngIf="noRepoResults"> No Repositories found</pre>
+    <div *ngIf="repos" class="repo-list">
+	    <ul>
+		    <li *ngFor="let repo of repos">
+	         <a href ={{repo.html_url}} > {{ repo.full_name }} </a>
+	        </li>
+	    </ul>
+	</div>
