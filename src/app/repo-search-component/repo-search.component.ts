@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { ApiRequestService } from '../shared-components/api-requests.service/api-requests.service'
 
@@ -8,14 +8,23 @@ import { ApiRequestService } from '../shared-components/api-requests.service/api
   styleUrls: ['./repo-search.component.css']
 })
 
-export class RepoSearchComponent {
+export class RepoSearchComponent implements OnInit {
   private repos: Observable<any>;
   private noRepoResults: Boolean = false;
+
+  @Input() user;
+
+  ngOnInit(){
+    if(this.user){
+      this.getUserRepos(this.user.login);
+    }
+  }
 
   constructor(private apiRequestService: ApiRequestService) {
   }
 
   getUserRepos(username: string) {
+
        this.apiRequestService.getUserRepos(username)
           .subscribe(
           data => {

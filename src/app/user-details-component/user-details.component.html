@@ -11,57 +11,57 @@
 <h3 *ngIf="username.value && !noUserResults">User Details</h3>
 <pre *ngIf="noUserResults"> User not found!</pre>
 <div *ngIf="user" class="user-details">
-	<div class="pull-right">
-	<img style="width:200px;height:200px;" src="https://avatars3.githubusercontent.com/u/16311322?v=3">
+	<div>
+	     <img class="user-avatar"
+           src="https://avatars3.githubusercontent.com/u/16311322?v=3">
 	</div>
 	
 	<div class="form-group">
-      <label class="control-label col-md-3" for="type">Type:</label>
-      <div class="col-md-4">
-      	{{user.type}}
-      </div>
+            <label class="control-label col-md-3" for="type">Type:</label>
+            <div class="col-md-4">
+            	{{user.type}}
+            </div>
 	</div>
 
 	<div class="form-group">
-      <label class="control-label col-md-3" for="UserName">User Name:</label>
-      <div class="col-md-4">
-      	<a href={{user.html_url}}>{{user.login}}</a>
-      </div>
+            <label class="control-label col-md-3" for="UserName">User Name:</label>
+            <div class="col-md-4">
+            	<a href={{user.html_url}}>{{user.login}}</a>
+            </div>
 	</div>
 
 	<div class="form-group">
-      <label class="control-label col-md-3" for="FullName">Full Name:</label>
-      <div class="col-md-6">
-      	{{user.name}}
-      </div>
+            <label class="control-label col-md-3" for="FullName">Full Name:</label>
+            <div class="col-md-6">
+            	{{user.name}}
+            </div>
 	</div>
 
 	<div class="form-group">
-      <label class="control-label col-md-3" for="Bio">User Bio:</label>
-      <div class="col-md-6">
-      	{{user.bio}}
-      </div>
+            <label class="control-label col-md-3" for="Bio">User Bio:</label>
+            <div class="col-md-6">
+            	{{user.bio}}
+            </div>
 	</div>
+
+      <div class="form-group">
+            <label class="control-label col-md-3" for="Email">Email:</label>
+            <div class="col-md-4">
+                  {{user.email}}
+            </div>
+      </div>
+
+      <div class="form-group">
+            <label class="control-label col-md-3" for="Company">Company:</label>
+            <div class="col-md-4">
+                  {{user.company}}
+            </div>
+      </div>
 
 	<div class="form-group">
-      <label class="control-label col-md-3" for="Repos">Repositories:</label>
-      <div class="col-md-4">
-      	<a href={{user.repos_url}}>Click here to see repositories of {{user.name}}</a>
-      </div>
+            <label class="control-label col-md-3" for="Repos">Repositories:</label>
+            <div class="col-md-4">
+                  <repo-search [user]="user"></repo-search>
+            </div>
 	</div>
-
-	<div class="form-group">
-      <label class="control-label col-md-3" for="Email">Email:</label>
-      <div class="col-md-4">
-      	{{user.email}}
-      </div>
-	</div>
-
-	<div class="form-group">
-      <label class="control-label col-md-3" for="Company">Company:</label>
-      <div class="col-md-4">
-      	{{user.company}}
-      </div>
-	</div>
-
 </div>

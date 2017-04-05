@@ -5,8 +5,7 @@ import { HomeComponent } from './home-component/home.component';
 import { AboutComponent } from './about-component/about.component';
 import { MemberComponent } from './member-component/member.component';
 import { ContactComponent } from './contact-component/contact.component';
-import { RepoSearchComponent } from './repo-search-component/repo-search.component'
-import { UserDetailsComponent } from './user-details-component/user-details.component'
+import { UserDetailsComponent } from './user-details-component/user-details.component';
 
 const appRoutes: Routes = [
 	{
@@ -24,10 +23,6 @@ const appRoutes: Routes = [
   {
     path: 'user',
     component: UserDetailsComponent
-  },
-  {
-    path: 'repos',
-    component: RepoSearchComponent
   },
   {
     path: 'contact',

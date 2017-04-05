@@ -1,5 +1,6 @@
 .form-group{
   display: flex;
+  position: relative;
 }
 
 .user-search-form{
@@ -20,3 +21,11 @@
 .user-details a{
   color: #337ab7;
 } 
+
+.user-avatar{
+	width:15%;
+	height: auto;
+	float:right;
+	position: absolute;
+	right: 10%;
+}
