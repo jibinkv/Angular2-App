@@ -12,8 +12,7 @@
 <pre *ngIf="noUserResults"> User not found!</pre>
 <div *ngIf="user" class="user-details">
 	<div>
-	     <img class="user-avatar"
-           src="https://avatars3.githubusercontent.com/u/16311322?v=3">
+	     <img class="user-avatar" src={{user.avatar_url}}>
 	</div>
 	
 	<div class="form-group">
